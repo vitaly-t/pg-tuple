@@ -1,10 +1,15 @@
 pg-tuple
 ========
 
+**This project is under development.**
+
 [![Build Status](https://travis-ci.org/vitaly-t/pg-tuple.svg?branch=master)](https://travis-ci.org/vitaly-t/pg-tuple)
 [![Coverage Status](https://coveralls.io/repos/vitaly-t/pg-tuple/badge.svg?branch=master)](https://coveralls.io/r/vitaly-t/pg-tuple?branch=master)
 
-Parses a text string that represents a PostgreSQL tuple into an array of strings.
+Parses PostgreSQL tuples, with support for:
+
+* composite tuples
+* arrays of tuples
 
 ## Installing
 
@@ -27,13 +32,7 @@ $ npm run coverage
 
 ## Usage
 
-```js
-var tuple = require('pg-tuple');
-
-var data = "(1,text)";
-
-tuple(data); //=> ['1','text']
-```
+Not yet formulated.
 
 ## License
 
