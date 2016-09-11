@@ -6,6 +6,6 @@ var main = require('../lib');
 
 describe('main test', function () {
     it('must be success', function () {
-        expect(true).toBe(true);
+        expect(main.parse()).toBe(true);
     });
 });
