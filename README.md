@@ -4,7 +4,7 @@ pg-tuple
 **This project is under development.**
 
 [![Build Status](https://travis-ci.org/vitaly-t/pg-tuple.svg?branch=master)](https://travis-ci.org/vitaly-t/pg-tuple)
-[![Coverage Status](https://coveralls.io/repos/vitaly-t/pg-tuple/badge.svg?branch=master)](https://coveralls.io/r/vitaly-t/pg-tuple?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/vitaly-t/pg-tuple/badge.svg?branch=master)](https://coveralls.io/github/vitaly-t/pg-tuple?branch=master)
 
 Parses PostgreSQL tuples, with support for:
 
