@@ -15,7 +15,58 @@ Parses PostgreSQL tuples, with support for:
 ## Installing
 
 ```
-$ npm install pg-tuple
+$ npm install pg-tuple --save
+```
+
+## Usage
+
+```js
+var tuple = require(pg-tuple);
+```
+
+Suppose you have a custom type in your database, declared like this:
+
+```sql
+CREATE TYPE myType AS (a INT, b TEXT);
+```
+
+Column values of such type are presented as tuple strings that require parsing.
+
+* parsing into an array of values - strings
+
+```js
+var data = tuple.single(value);
+// data = an array of strings like this: ['1', 'text'] 
+```
+
+* parsing into the original object structure of `{a, b}`
+
+```js
+var obj = tuple.single(value, function(data, res) {
+    // `this` here refers to `res`
+    res.a = parseInt(data[0]);
+    res.b = data[1];
+});
+// obj = a well-parsed object like this: {a:1, b:'text'}
+```
+
+For columns declared as an array of your custom type (`myType[]`):   
+
+```js
+var data = tuple.array(value);
+// data = an array of tuple strings
+```
+
+Parsing `myType[]` tuple string into an array of objects (composite parsing):
+
+```js
+var data = tuple.array(value, function(v, index) {
+    return tuple.single(v, function(data, res) {
+        res.a = parseInt(data[0]);
+        res.b = data[1];
+    });
+});
+// data = an array of well-parsed objects: [{a:1, b:'hello'},{a:2, b:'world'}]
 ```
 
 ## Testing
@@ -30,10 +81,6 @@ Testing with coverage:
 ```
 $ npm run coverage
 ```
-
-## Usage
-
-Not yet formulated.
 
 ## License
 
