@@ -1,6 +1,8 @@
 pg-tuple
 ========
 
+[![Join the chat at https://gitter.im/vitaly-t/pg-tuple](https://badges.gitter.im/vitaly-t/pg-tuple.svg)](https://gitter.im/vitaly-t/pg-tuple?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 **This project is under development.**
 
 [![Build Status](https://travis-ci.org/vitaly-t/pg-tuple.svg?branch=master)](https://travis-ci.org/vitaly-t/pg-tuple)
