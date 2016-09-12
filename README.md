@@ -30,43 +30,43 @@ Suppose you have a custom type in your database, declared like this:
 CREATE TYPE myType AS (a INT, b TEXT);
 ```
 
-Column values of such type are presented as tuple strings that require parsing.
+Column values of such type are retrieved as tuple strings that require parsing.
 
-* parsing into an array of values - strings
+* parsing into an array of string values:
 
 ```js
 var data = tuple.single(value);
 // data = an array of strings like this: ['1', 'text'] 
 ```
 
-* parsing into the original object structure of `{a, b}`
+* parsing into a proper object `{a, b}`:
 
 ```js
-var obj = tuple.single(value, function(data, res) {
-    // `this` here refers to `res`
-    res.a = parseInt(data[0]);
-    res.b = data[1];
+var data = tuple.single(value, function(e, obj) {
+    // `this` here refers to `obj`
+    obj.a = parseInt(e[0]);
+    obj.b = e[1];
 });
-// obj = a well-parsed object like this: {a:1, b:'text'}
+// data = a well-parsed object like this: {a:1, b:'text'}
 ```
 
-For columns declared as an array of your custom type (`myType[]`):   
+* For columns of array type `myType[]`:   
 
 ```js
 var data = tuple.array(value);
 // data = an array of tuple strings
 ```
 
-Parsing `myType[]` tuple string into an array of objects (composite parsing):
+* Convert `myType[]` into an array of objects (composite parsing):
 
 ```js
 var data = tuple.array(value, function(v, index) {
-    return tuple.single(v, function(data, res) {
-        res.a = parseInt(data[0]);
-        res.b = data[1];
+    return tuple.single(v, function(e, obj) {
+        obj.a = parseInt(e[0]);
+        obj.b = e[1];
     });
 });
-// data = an array of well-parsed objects: [{a:1, b:'hello'},{a:2, b:'world'}]
+// data = an array of objects: [{a:1, b:'hello'},{a:2, b:'world'}]
 ```
 
 ## Testing
