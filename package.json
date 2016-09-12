@@ -1,6 +1,6 @@
 {
   "name": "pg-tuple",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parses PostgreSQL tuples.",
   "main": "lib/index.js",
   "scripts": {

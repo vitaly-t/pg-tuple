@@ -1,11 +1,10 @@
 'use strict';
 
-var main = require('../lib');
+var lib = require('../lib');
 
-// TODO: Add the main tests here
-
-describe('main test', function () {
-    it('must be success', function () {
-        expect(main.parse()).toBe(true);
+describe('Library', function () {
+    it('must expose all known functions', function () {
+        expect(typeof lib.single).toBe('function');
+        expect(typeof lib.array).toBe('function');
     });
 });
