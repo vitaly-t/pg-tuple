@@ -30,7 +30,7 @@ Suppose you have a custom type in your database, declared like this:
 CREATE TYPE myType AS (a INT, b TEXT);
 ```
 
-Column values of such type are retrieved as tuple strings that require parsing.
+Column values of such type are received as tuple strings that need parsing.
 
 * parsing into an array of string values:
 
@@ -50,14 +50,14 @@ var data = tuple.single(value, function(e, obj) {
 // data = a well-parsed object like this: {a:1, b:'text'}
 ```
 
-* For columns of array type `myType[]`:   
+* parsing columns of array type `myType[]`:   
 
 ```js
 var data = tuple.array(value);
 // data = an array of tuple strings
 ```
 
-* Convert `myType[]` into an array of objects (composite parsing):
+* converting `myType[]` into an array of objects (composite parsing):
 
 ```js
 var data = tuple.array(value, function(v, index) {
