@@ -21,7 +21,7 @@ $ npm install pg-tuple --save
 ## Usage
 
 ```js
-var tuple = require(pg-tuple);
+var tuple = require('pg-tuple');
 ```
 
 Suppose you have a custom type in your database, declared like this:
