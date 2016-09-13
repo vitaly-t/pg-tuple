@@ -3,8 +3,13 @@
 var parse = require('../lib/single');
 
 describe('Single/Positive', function () {
-    it("must accept a single space", function () {
+    it("must allow spaces-only", function () {
         expect(parse('( )')).toEqual([' ']);
+        expect(parse('(   )')).toEqual(['   ']);
+        expect(parse('(" ")')).toEqual([' ']);
+        expect(parse('("   ")')).toEqual(['   ']);
+        expect(parse('( , )')).toEqual([' ', ' ']);
+        expect(parse('(   ,   )')).toEqual(['   ', '   ']);
     });
     it("must accept a single digit", function () {
         expect(parse('(0)')).toEqual(['0']);
@@ -16,13 +21,13 @@ describe('Single/Positive', function () {
     });
     it("must accept back-slashes", function () {
         expect(parse('(\\\\\\\\)')).toEqual(['\\']);
+        expect(parse('(\\\\\\\\\\\\\\\\)')).toEqual(['\\\\']);
         expect(parse('(\\\\\\\\,\\\\\\\\)')).toEqual(['\\', '\\']);
     });
-    /*
-     it("must accept empty strings", function () {
-     expect(single('(,"",,"""",)')).toEqual(['', '', '', '""']);
-     });
-     */
+    it("must accept empty strings", function () {
+        expect(parse('(,)')).toEqual(['', '']);
+        expect(parse('(,"",,,"")')).toEqual(['', '', '', '', '']);
+    });
 });
 
 describe('Single/Negative', function () {
