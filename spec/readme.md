@@ -44,9 +44,8 @@ A composite tuple can be of any complexity, including:
 ## Tuple Arrays
 
 1. A tuple that represents an array always starts with `{` and ends with `}`
-2. A tuple values inside arrays are always wrapped in double-quotes: `{"(val1,val2)","(val1,val2)"}`
+2. Tuple values inside arrays are always wrapped in double-quotes: `{"(val1,val2)","(val1,val2)"}`
 
 **Parts that I'm not sure about yet:**
 
-3. Wrapping double-quotes for tuple values on nested levels are prefixed with back-slash.
- 
+3. Wrapping double-quotes for tuple values on nested levels are prefixed with back-slash?
