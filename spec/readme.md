@@ -34,8 +34,8 @@ A composite tuple can be of any complexity, including:
 5. String values are presented directly (as open values) when they have no spaces in them.
 6. String values are presented inside double quotes when they have spaces in them.
 7. Special symbols are encoded according to which symbol it is:
-   7.1 Every double-quote `"` is doubled, to be `""`
-   7.2 Every back-slash `\` is quadrupled, to be `\\\\`
+  1. Every double-quote `"` is doubled, to be `""`
+  2. Every back-slash `\` is quadrupled, to be `\\\\`
 8. Boolean values are presented as a single symbol: `t` for true and `f` for false
 9. All Date/Time type of values are presented as strings.
 
