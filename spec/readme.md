@@ -9,6 +9,12 @@ since no official documentation could be located while writing this library.
 
 As of today, there is still an open question on StackOverflow: [PostgreSQL tuple format](http://stackoverflow.com/questions/39520517/postgresql-tuple-format)
 
+The things we know about the tuple format today:
+
+* [PostgreSQL official documentation](https://www.postgresql.org/docs/9.6/static/rowtypes.html)
+* [Potentially, from StackOverflow](http://stackoverflow.com/questions/39520517/postgresql-tuple-format)
+* [Our own playground tests](playground.md)
+
 ## Content
 
 * [Definition](#definition)
