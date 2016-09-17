@@ -3,12 +3,13 @@
 var parse = require('../lib/array');
 
 describe('Array/Positive', function () {
-/*
+
     it("simple arrays of values", function () {
-        expect(parse('{"(2,two)","(3,three)"}')).toEqual([
-            '(2,two)', '(3,three)'
+        expect(parse('{"(2,two)","(3,three)","(4,four)"}')).toEqual([
+            '(2,two)', '(3,three)', '(4,four)'
         ]);
     });
+/*
     it("composite value + array", function () {
         expect(parse('("(7,inner)","{""(8,eight)"",""(9,nine)""}")')).toEqual([
             '(7,inner)', '{""(8,eight)"",""(9,nine)""}'
