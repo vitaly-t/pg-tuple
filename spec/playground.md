@@ -33,7 +33,7 @@ CREATE TABLE test(
 );
 ```
 
-Inserting records into our table:
+Inserting 3 records into our table:
 
 ```sql
 INSERT INTO test(st) VALUES
