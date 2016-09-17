@@ -33,7 +33,7 @@ CREATE TABLE test(
 );
 ```
 
-Inserting 3 records into our table:
+Inserting 3 rows into our table:
 
 ```sql
 INSERT INTO test(st) VALUES
@@ -57,6 +57,13 @@ Result:
 
 ("\\ text",0,NaN,f,,,{},"{""one { two"",""three } four""}")
 ```
+
+Thoughts: the way the format mutates as the data changes is horrifying:
+
+* why array is normally presented inside double-quotes, while an empty array is suddenly an open value?
+* why a single `"` is suddenly presented as `\\""`?
+* why unicode-formatted text is changing the escaping for `\`? How can we tell the difference then?
+* the way that `{` and `}` are escaped is not always clear 
 
 ## Composite Tuple
 
