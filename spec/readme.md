@@ -27,7 +27,24 @@ A composite tuple can be of any complexity, including:
 
 ## Tuple Object
 
-
+1. A single tuple always starts with `(` and ends with `)`
+2. Values inside a tuple are comma-separated: `(val1,val2,...)`
+3. A tuple can be empty: `()`
+4. Spaces inside a tuple are never ignored. For example, `( )` is not an empty tuple, but a tuple with one value - space symbol.
+5. String values are presented directly (as open values) when they have no spaces in them.
+6. String values are presented inside double quotes when they have spaces in them.
+7. Special symbols are encoded according to which symbol it is:
+   7.1 Every double-quote `"` is doubled, to be `""`
+   7.2 Every back-slash `\` is quadrupled, to be `\\\\`
+8. Boolean values are presented as a single symbol: `t` for true and `f` for false
+9. All Date/Time type of values are presented as strings.
 
 ## Tuple Arrays
 
+1. A tuple that represents an array always starts with `{` and ends with `}`
+2. A tuple values inside arrays are always wrapped in double-quotes: `{"(val1,val2)","(val1,val2)"}`
+
+Parts that I'm not sure about yet:
+
+3. Wrapping double-quotes for tuple values on nested levels are prefixed with back-slash.
+ 
