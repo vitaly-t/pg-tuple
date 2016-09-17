@@ -9,10 +9,24 @@ since no official documentation could be located while writing this library.
 
 ## Content
 
+* [Definition](#definition)
 * [Tuple Object](#tuple-object)
 * [Tuple Arrays](#tuple-array)
 
+## Definition
+
+In this document, by `tuple` we refer to string presentation for custom types, as supported by PostgreSQL,
+i.e. a tuple is a result of serializing a custom data structure into a text string. 
+
+When a `tuple` contains fields of another custom type, such structure is referred to as a `composite tuple`. 
+
+A composite tuple can be of any complexity, including:
+
+* Tuple arrays of any number of dimensions
+* Composite tuple arrays of any number of dimensions
+
 ## Tuple Object
+
 
 
 ## Tuple Arrays
