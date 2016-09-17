@@ -49,3 +49,5 @@ A composite tuple can be of any complexity, including:
 **Parts that I'm not sure about yet:**
 
 3. Wrapping double-quotes for tuple values on nested levels are prefixed with back-slash?
+4. Tuples on nested values are wrapped into two double-quotes?
+
