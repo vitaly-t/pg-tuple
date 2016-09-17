@@ -36,11 +36,10 @@ CREATE TABLE test(
 Inserting records into our table:
 
 ```sql
-INSERT INTO test(st) VALUES(('hello', 123, -456.789, true, CURRENT_DATE, CURRENT_TIMESTAMP, array[1,2,3], array['one', 'two', 'three']));
-
-INSERT INTO test(st) VALUES(('hello world!', 0, 'NaN', false, null, null, array[1,2,3], array['one\ two', 'three" four']));
-
-INSERT INTO test(st) VALUES((E'\\ text', 0, 'NaN', false, null, null, array[]::int[], array['one { two', 'three } four']));
+INSERT INTO test(st) VALUES
+(('hello', 123, -456.789, true, CURRENT_DATE, CURRENT_TIMESTAMP, array[1,2,3], array['one', 'two', 'three'])),
+(('hello world!', 0, 'NaN', false, null, null, array[1,2,3], array['one\ two', 'three" four'])),
+((E'\\ text', 0, 'NaN', false, null, null, array[]::int[], array['one { two', 'three } four']));
 ```
 
 Selecting all records in the table:
