@@ -29,6 +29,8 @@ A composite tuple can be of any complexity, including:
 
 ## Tuple Object
 
+Based on [the following playground tests](playground.md).
+
 1. A single tuple always starts with `(` and ends with `)`
 2. Values inside a tuple are comma-separated: `(val1,val2,...)`
 3. A tuple can be empty: `()`
