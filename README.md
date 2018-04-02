@@ -1,7 +1,7 @@
 pg-tuple
 ========
 
-**This project is under development.**
+**WARNING: This project has been abandoned, for the lack of official tuple specification.**
 
 [![Build Status](https://travis-ci.org/vitaly-t/pg-tuple.svg?branch=master)](https://travis-ci.org/vitaly-t/pg-tuple)
 [![Coverage Status](https://coveralls.io/repos/github/vitaly-t/pg-tuple/badge.svg?branch=master)](https://coveralls.io/github/vitaly-t/pg-tuple?branch=master)
